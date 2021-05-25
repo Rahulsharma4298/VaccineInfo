@@ -1,0 +1,186 @@
+header .heading{
+    height: 250px;
+    position: relative;
+    min-height: 100px;
+}
+
+header .navbar{
+    background-color: #21094e !important;
+    padding: 5px;
+}
+
+header .navbar li a{
+    color: #fff;
+}
+
+header .navbar li a:hover{
+    font-weight: bold;
+    color:#fc5404;
+}
+
+header .heading{
+    background: linear-gradient(to bottom right, #f55c47 , #fc5404, #f9b208);
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+header .heading img{
+    border-radius: 10px;
+    float: left;
+    width: 200px;
+    margin: 15px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+header .heading h1{
+    font-size: 60px;
+}
+
+header .heading p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* tabs */
+section#menu{
+    margin-bottom: 100px;
+}
+
+section#menu .tab-content{
+    text-align: center;
+}
+
+
+section#menu .nav .nav-item a{
+    font-weight: 700;
+    border: 2px solid #c1c1c1;
+    border-radius: 25px;
+}
+
+section#menu .nav-item .active{
+    color: #fff;
+    background-color: #21094e;
+}
+
+section#menu .nav-item{
+    padding: 10px 2px;
+}
+
+section#menu .nav{
+    margin: 20px auto;
+}
+
+/* tab forms */
+section#menu .tab-content .form-group{
+    display: inline-block;
+}
+
+section#menu .tab-content form .form-group input[type='text']{
+    min-width: 250px;
+}
+
+section#menu .tab-content #state{
+    min-width: 250px;
+    width: 30%;
+}
+
+section#menu .tab-content #dist{
+    min-width: 250px;
+    width: 30%;
+}
+
+
+/* tab btn */
+section#menu .tab-content #searchbypin .btn{
+    margin-bottom: 5.5px;
+}
+
+section#menu .tab-content #searchbydist .btn{
+    margin-bottom: 5.5px;
+}
+
+/* cards */
+section#menu .card-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+
+section#menu .card-box .card{
+    margin: 10px;
+    min-width: 35% !important;
+    width: 40% !important;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    background-color: #21094e;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.love{
+    color: red;
+}
+
+footer p{
+    text-align: center;
+    color: #fff;
+    font-size: 90%;
+    font-weight: 400;
+}
+
+footer p:hover{
+    color: #fc5404;
+    transition: color .5s;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+footer p:hover .love{
+    color: pink;
+    transition: color .5s;
+}
+
+
+
+@media (max-width: 768px){
+    header .heading img{
+        display: none;
+    }
+
+    section#menu .card-box .card,
+    section#menu .tab-content #searchbydist .btn,
+    section#menu .tab-content #searchbypin .btn,
+    section#menu .tab-content #state,
+    section#menu .tab-content #dist
+    {   
+        width: 100% !important;
+    }
+
+    section#menu .tab-content #searchbydist label,
+    section#menu .tab-content #searchbydist label{
+        display: none;
+    }
+
+    section#menu .tab-content .form-group,
+    section#menu .tab-content form .form-group input[type='text']{
+        width: 100% !important; 
+    }
+
+    footer p{
+        font-size: 80%;
+    }
+
+}
