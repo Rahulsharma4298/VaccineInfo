@@ -18,10 +18,10 @@
                   <a class="nav-link active" href="./">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Know Your Vaccine</a>
+                  <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="tg.php">Join Telegram Alerts</a>
                 </li>
               </ul>
             </nav>
@@ -29,5 +29,8 @@
             <h1 class="display-1">Vaccine Info</h1>
             <p>Check your nearest vaccination center and slots availability</p>
             <img src="style/header-img.jpg" alt="vaccine" class="img-fluid">
-        </div>    
+        </div>
+
+          <a href="tg.php" id="subscribe-tg"><marquee>Get Telegram alerts for slot availabity & automatic slot booking</marquee></a>
+    
 </header>

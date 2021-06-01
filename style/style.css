@@ -153,6 +153,65 @@ footer p:hover .love{
     transition: color .5s;
 }
 
+/* tg_page */
+
+section#tg-info{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+section#tg-info .btn{
+    width: 300px;
+}
+
+section#tg-info h2,h3{
+    text-align: center;
+}
+
+section#tg-info h2
+{
+    font-size: 2.2rem;
+    text-shadow: 0 0 20px #c1c1c1;
+}
+
+section#tg-info h3
+{
+    font-size: 1.5rem;
+    margin: 20px;
+    text-decoration: underline;
+}
+
+section#tg-info #invite-code
+{
+    text-align: center;
+    background-color: #21094eec;
+    color: #fff;
+    padding: 2px 0;
+    width: 300px;
+    margin: 10px auto;
+}
+
+#icode:hover{
+    color: #f55c47;
+    font-weight: 700;
+}
+
+a#subscribe-tg{
+    text-align: center !important;
+    padding: 10px;
+    background-color: #21094e;
+    color: #fff;
+    display: block;
+    margin: auto;
+    border-bottom: 2px solid #fc5404;
+    font-size: 15px;
+}
+
+a#subscribe-tg:hover{
+    text-decoration: none;
+    color: #fc5404;
+}
 
 
 @media (max-width: 768px){
@@ -164,7 +223,8 @@ footer p:hover .love{
     section#menu .tab-content #searchbydist .btn,
     section#menu .tab-content #searchbypin .btn,
     section#menu .tab-content #state,
-    section#menu .tab-content #dist
+    section#menu .tab-content #dist,
+    section#tg-info .btn
     {   
         width: 100% !important;
     }
@@ -179,8 +239,13 @@ footer p:hover .love{
         width: 100% !important; 
     }
 
+    section#tg-info p{
+        text-align: auto !important;
+    } 
+
     footer p{
         font-size: 80%;
     }
+
 
 }
