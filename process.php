@@ -4,7 +4,7 @@ $data = new Data;
 $states = $data->getStates()['states'];
 $state_id = $_GET['state_id'] ?? null;
 if($state_id){
-    echo '<option>Select District</option>';
+    echo '<option value="">Select District</option>';
     $districts = $data->getDistrictByStateId($state_id)['districts'];
     foreach($districts as $dist){
         echo '<option value='.$dist['district_id'].'>' . $dist['district_name'] . '</option>';
@@ -17,10 +17,15 @@ $pin = $_GET['pin'] ?? null;
 $date = $_GET['date'] ?? date('d-m-Y');
 if($pin && $date){
     $slots = $data->getSlotsByPinRange($pin, $date)['centers'];
+    if(count($slots) == 0)
+    {
+      echo "<p class='text-danger' style='margin: 10px auto'>No Slots Available</p>";
+      die();
+    }
     echo "<div class='card-box container justify-content-center'>";
     foreach($slots as $key=>$s){
     echo"<div class='card table-hover bg-light mb-3' style='width: 18rem;'>";
-    echo '<div class="card-header">' . $s['sessions'][0]['date'] . '</div>';
+    echo '<div class="card-header"><span class="text-bold">' . $s['sessions'][0]['date'] . '</span></div>';
     echo  "<div class='card-body'>
       <h5 class='card-title'>$s[name]</h5>
           <h6 class='card-subtitle mb-2 text-muted'>$s[address]</h6>";
@@ -45,6 +50,11 @@ if($pin && $date){
 
   if($dist_id && $date){
     $slots = $data->getSlotsByDistRange($dist_id, $date)['centers'];
+    if(count($slots) == 0)
+    {
+      echo "<p class='text-danger' style='margin: 10px auto'>No Slots Available</p>";
+      die();
+    }
     echo "<div class='card-box container justify-content-center'>";
     foreach($slots as $key=>$s){
     echo"<div class='card table-hover bg-light mb-3' style='width: 18rem;'>";

@@ -80,6 +80,12 @@ function getByPin(){
     const btn = document.getElementById('search-by-pin-btn');
     const pin = document.getElementById('pin').value;
     var table_data = document.getElementById('slot-data-pin');
+    if(pin == '')
+    {
+        table_data.innerHTML = "<p class='text-danger' style='margin: 10px auto'>Please Enter Pin Code</p>";
+        console.log(table_data.innerHTML);
+        return;
+    }
     ajaxreq.open('GET', 'process.php?pin='+pin, 'TRUE');
     btn.disabled = true;
     btn.innerText = "Please Wait";
@@ -89,6 +95,7 @@ function getByPin(){
             table_data.innerHTML = ajaxreq.responseText;
             table_data.scrollIntoView();
         }
+        console.log(ajaxreq.responseText);
     btn.disabled = false;
     btn.innerText = "Search";
         
@@ -100,8 +107,13 @@ function getByDist(){
     const btn = document.getElementById('search-by-dist-btn');
     var distList = document.getElementById('dist-list');
     const distID = distList.options[distList.selectedIndex].value;
-    console.log(distID);
     var table_data = document.getElementById('slot-data-dist');
+    console.log(distID);
+    if(distID == '')
+    {
+        table_data.innerHTML = "<p class='text-danger' style='margin: 10px auto'>Please Select State & District</p>";
+        return;
+    }
     ajaxreq.open('GET', 'process.php?dist='+distID, 'TRUE');
     btn.disabled = true;
     btn.innerText = "Please Wait";
